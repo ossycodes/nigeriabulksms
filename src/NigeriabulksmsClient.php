@@ -27,9 +27,9 @@ class NigeriabulksmsClient
             $message->setFrom($this->config["sender"]);
         }
 
-        if (empty($message->recipients)) {
-            $message->setRecipients($this->config["recipients"]);
-        }
+        // if (empty($message->recipients)) {
+        //     $message->setRecipients($this->config["recipients"]);
+        // }
    
         try {
 
