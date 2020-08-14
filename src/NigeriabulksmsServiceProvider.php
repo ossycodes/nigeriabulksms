@@ -5,7 +5,7 @@ namespace NotificationChannels\Nigeriabulksms;
 use Illuminate\Support\ServiceProvider;
 use NotificationChannels\Nigeriabulksms\Exceptions\InvalidConfiguration;
 
-class Nigeriabulksms extends ServiceProvider
+class NigeriabulksmsServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
