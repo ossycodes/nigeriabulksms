@@ -2,6 +2,7 @@
 
 namespace NotificationChannels\Nigeriabulksms;
 
+use Illuminate\Notifications\Notification;
 use NotificationChannels\Nigeriabulksms\Exceptions\CouldNotSendNotification;
 
 class NigeriabulksmsChannel

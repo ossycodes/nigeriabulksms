@@ -4,6 +4,7 @@ namespace NotificationChannels\Nigeriabulksms;
 
 use Exception;
 use NotificationChannels\Nigeriabulksms\Exceptions\CouldNotSendNotification;
+use NotificationChannels\Nigeriabulksms\Exceptions\InvalidPhonenumber;
 
 class NigeriabulksmsClient
 {
@@ -27,9 +28,10 @@ class NigeriabulksmsClient
             $message->setFrom($this->config["sender"]);
         }
 
-        // if (empty($message->recipients)) {
-        //     $message->setRecipients($this->config["recipients"]);
-        // }
+        if (empty($message->recipients)) {
+            throw InvalidPhonenumber::configurationNotSet();
+            // $message->setRecipients($this->config["recipients"]);
+        }
    
         try {
 

@@ -35,7 +35,7 @@ You will need to [Register](https://nigeriabulksms.com) to get your `username an
 
 ```bash
 NIGERIABULKSMS_USERNAME=""
-NIGERIABULKSMS_KEY=""
+NIGERIABULKSMS_PASSWORD=""
 NIGERIABULKSMS_SENDER=""
 ```
 
@@ -105,18 +105,24 @@ class NewsWasPublished extends Notification
     public function toNigeriabulksms($notifiable)
     {
 		return (new NigeriabulksmsMessage())
-                    ->content('Your SMS message content');
+                    ->setContent('Your SMS message content');
 
     }
 }
 ```
 
-Additionally you can add recipients (single value or array)
+Additionally you can add recipients(the phonenumber the messages will be sent to) (single value or array)
 
 ``` php
 return (new NigeriabulksmsMessage("Your {$notifiable->service} was ordered!"))->setRecipients($recipients);
 ```
 
+also you can add who the notification(sms) is sent from, this will overide the 
+NIGERIABULKSMS_SENDER="" in your .env
+
+``` php
+return (new NigeriabulksmsMessage("Your {$notifiable->service} was ordered!"))->setFrom("name of your app");
+```
 
 ## Security
 
