@@ -32,12 +32,16 @@ class NigeriabulksmsChannel
             $message->setRecipients($to);
         }
 
-        try {
-            $data = $this->client->send($message);
-        } catch (CouldNotSendNotification $e) {
-            throw CouldNotSendNotification::serviceRespondedWithAnError($e->getMessage());
+        $result = $this->client->send($message);
+        
+        if (isset($result->status) && strtoupper($result->status) == 'OK') {
+            return $result;
+        } else if (isset($result->error)) {
+            // Message failed, check reason.
+            throw CouldNotSendNotification::serviceRespondedWithAnError("Message failed - error: $result->error");
+        } else {
+            // Could not determine the message response.
+            throw CouldNotSendNotification::serviceRespondedWithAnError("Unable to process request");
         }
-
-        return $data;
     }
 }
