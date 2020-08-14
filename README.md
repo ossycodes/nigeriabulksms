@@ -124,6 +124,8 @@ NIGERIABULKSMS_SENDER="" in your .env
 return (new NigeriabulksmsMessage("Your {$notifiable->service} was ordered!"))->setFrom("name of your app");
 ```
 
+Incase of errors from Nigeriabulksms service please do well to check [Nigeriabulksms api error codes on thier developer portal](https://nigeriabulksms.com/sms-gateway-api/)
+
 ## Security
 
 If you discover any security-related issues, please email osaigbovoemmanuel1@gmail.com instead of using the issue tracker.
