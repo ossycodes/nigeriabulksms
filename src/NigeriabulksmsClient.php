@@ -62,7 +62,7 @@ class NigeriabulksmsClient
             
             $result = curl_exec($ch);
             
-            $result = json_decode($result);
+            $result = json_decode($result); //error & errno
 
             return $result;
 
