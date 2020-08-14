@@ -44,6 +44,10 @@ class NigeriabulksmsMessage
         return $this;
     }
 
+    public function getFrom() {
+        return $this->from;
+    }
+
     public function setRecipients($recipients)
     {
         if (is_array($recipients)) {

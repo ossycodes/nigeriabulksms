@@ -30,18 +30,17 @@ class NigeriabulksmsClient
 
         if (empty($message->recipients)) {
             throw InvalidPhonenumber::configurationNotSet();
-            // $message->setRecipients($this->config["recipients"]);
         }
    
         try {
 
-            $username = 'username'; //$this->config["username"]);
+            $username = $this->config["username"];
 
-            $password = 'password'; //$this->config["password"]);
+            $password = $this->config["password"];
             
-            $sender   = 'sender'; //$message->getFrom();
+            $sender   = $message->getFrom();
             
-            $smsMessage  = 'This is a test message.'; //$message->getContent();
+            $smsMessage  = $message->getContent();
             
             $recipients = $message->getrecipients();
 
