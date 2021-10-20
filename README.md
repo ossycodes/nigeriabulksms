@@ -44,8 +44,8 @@ To load them, add this to your `config/services.php` . This will load the Nigeri
 ```php
 'nigeriabulksms' => [
     'username'      => env('NIGERIABULKSMS_USERNAME'),
-    'password'           => env('NIGERIABULKSMS_PASSWORD'),
-    'sender'          => env('NIGERIABULKSMS_SENDER'),
+    'password'      => env('NIGERIABULKSMS_PASSWORD'),
+    'sender'        => env('NIGERIABULKSMS_SENDER'),
 ]
 ```
 
