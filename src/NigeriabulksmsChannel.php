@@ -53,7 +53,7 @@ class NigeriabulksmsChannel
             $nigeriaBulksmsMessage->recipients = $message->getRecipients();
             $nigeriaBulksmsMessage->body = $message->getContent();
 
-            return $this->client->message->send($message);
+            return $this->client->message->send($nigeriaBulksmsMessage);
 
         } catch (AuthenticateException $e) {
             // That means that your username and/or password is incorrect
