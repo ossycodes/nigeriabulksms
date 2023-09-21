@@ -49,7 +49,7 @@ class NigeriabulksmsChannel
 
             $nigeriaBulksmsMessage = new TextMessage();
             $nigeriaBulksmsMessage->sender = $message->getFrom();
-            $nigeriaBulksmsMessage->recipients = $message->setRecipients();
+            $nigeriaBulksmsMessage->recipients = $message->getrecipients();
             $nigeriaBulksmsMessage->body = $message->getContent();
 
             return $this->client->message->send($message);
