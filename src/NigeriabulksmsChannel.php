@@ -46,7 +46,7 @@ class NigeriabulksmsChannel
         }
 
         try {
-            
+
             $nigeriaBulksmsMessage = new TextMessage();
             $nigeriaBulksmsMessage->sender = $message->getFrom();
             $nigeriaBulksmsMessage->recipients = $message->setRecipients();
@@ -56,15 +56,15 @@ class NigeriabulksmsChannel
 
         } catch (AuthenticateException $e) {
             // That means that your username and/or password is incorrect
-            throw CouldNotSendNotification::serviceRespondedWithAnError($e->getErrorMessage());
+            throw CouldNotSendNotification::serviceRespondedWithAnError($e->getMessage());
         } catch (BalanceException $e) {
             // That means that your balance is insufficient
-            throw CouldNotSendNotification::serviceRespondedWithAnError($e->getErrorMessage());
+            throw CouldNotSendNotification::serviceRespondedWithAnError($e->getMessage());
         } catch (RequestDeniedException $e) {
             // That means that you do not have permission to perform this action
-            throw CouldNotSendNotification::serviceRespondedWithAnError($e->getErrorMessage());
+            throw CouldNotSendNotification::serviceRespondedWithAnError($e->getMessage());
         } catch (\Exception $e) {
-            throw CouldNotSendNotification::serviceRespondedWithAnError($e->getErrorMessage());
+            throw CouldNotSendNotification::serviceRespondedWithAnError($e->getMessage());
         }
     }
 }
