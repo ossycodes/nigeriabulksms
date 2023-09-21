@@ -11,9 +11,10 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
-        "illuminate/notifications": "~5.5 || ~6.0 || ~7.0 || ~8.0",
-        "illuminate/support": "~5.5 || ~6.0 || ~7.0 || ~8.0"
+        "php": ">=7.2.5",
+        "ossycodes/nigeriabulksms-php": "^1.0",
+        "illuminate/notifications": "5.5 - 10.0",
+        "illuminate/support": "5.5 - 10.0"
     },
     "require-dev": {
         "mockery/mockery": "^1.0",
