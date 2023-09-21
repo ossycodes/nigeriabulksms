@@ -5,9 +5,10 @@ namespace NotificationChannels\Nigeriabulksms;
 use Illuminate\Notifications\Notification;
 use Ossycodes\Nigeriabulksms\Objects\TextMessage;
 use Ossycodes\Nigeriabulksms\Client as NigeriabulksmsSDK;
-use Ossycodes\Nigeriabulksms\Exceptions\AuthenticateException;
 use Ossycodes\Nigeriabulksms\Exceptions\BalanceException;
+use Ossycodes\Nigeriabulksms\Exceptions\AuthenticateException;
 use Ossycodes\Nigeriabulksms\Exceptions\RequestDeniedException;
+use NotificationChannels\Nigeriabulksms\Exceptions\InvalidPhonenumber;
 use NotificationChannels\Nigeriabulksms\Exceptions\CouldNotSendNotification;
 
 class NigeriabulksmsChannel
