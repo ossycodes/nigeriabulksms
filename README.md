@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ossycodes/nigeriabulksms.svg?style=flat-square)](https://packagist.org/packages/ossycodes/nigeriabulksms)
 [![Total Downloads](https://img.shields.io/packagist/dt/ossycodes/nigeriabulksms.svg?style=flat-square)](https://packagist.org/packages/ossycodes/nigeriabulksms)
 
-This package makes it easy to send notifications using [Nigeriabulksms]('http://portal.nigeriabulksms.com/) with Laravel 5.5+, 6.x and 7.x
+This package makes it easy to send notifications using [Nigeriabulksms]('http://portal.nigeriabulksms.com/) with Laravel 5 and above
 
 
 
