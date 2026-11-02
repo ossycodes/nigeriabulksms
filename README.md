@@ -148,4 +148,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 ## How do I say Thank you?
 
+Support my open source work and help fund this project on [FLOSS Africa](https://flossafrica.com/m/ossycodes).
+
 Leave a star and follow me on [Twitter](https://twitter.com/ossycodes) .
